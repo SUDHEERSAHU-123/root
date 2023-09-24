@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE-edge">
+    <meta name="viewport" content="width=device-width,intial-scale=1.0">
+    <title>Web Development</title>
+    <link  rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css">
+    <link rel="stylesheet"  type="text/css"  href="sign.css">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+</head>
+
+<body>
+    <div class="active">
+        <form action="">
+            <br>
+            <h1>Sign up Page</h1>
+            <div class="input">
+                Firstname:<input type="text" id="FirstName"  placeholder="FirstName" required>
+                <i class='bx bx-user'></i>
+            </div>
+            <br>
+            <div class="input">
+                Lastname<input type="text" id="Lastname" placeholder="LastName" required>
+                
+            </div>
+            <div class="input">
+                password<input type="text" id="password" placeholder="password" required>
+                
+            </div>
+            <input type="submit" class="btn" value="SignIn" onclick="auth()"/>
+            <div class="register-link">
+                <a href="login.html">SignIn</a>
+            </div>
+
+        </form>
+        <script>
+            function auth(){
+                var Firstname =  document.getElementById("Firstname").value;
+                var Lastname =  document.getElementById("Lastname").value;
+                var password = document.getElementById("password").value;
+                if(Firstname=="Sudheer" && password=="Sudheer@123"){
+                    open("signup.html")
+                    alert("You are account Successfully created");
+                }
+                else{
+                    alert("Invalid Credintials");
+                }
+            }
+        </script>
+    </div>
+</body>
+</html>
